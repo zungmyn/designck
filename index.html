@@ -1,0 +1,43 @@
+<?php
+  $nb = $_POST[ "nb" ];
+  echo implode( ",", $nb );
+?>
+<!doctype html>
+<html lang="ko">
+ <title>광고이미지 검수 체크리스트</title>
+  <head>
+  <meta charset="utf-8">
+    <style>
+      * {
+        font-family: Consolas, sans-serif;
+          margin-bottom: 25px;
+      }
+                h1{
+            margin: 50px 0px 30px 50px;
+        }
+        form{
+            margin-left: 50px; font-size: 18px;
+        }
+        #ck{
+            width: 15px; height: 15px; 
+        }
+        #btn{
+            width: 120px; height: 60px; font-size: 16px; margin-top: 10px;
+        }
+
+    </style>
+  </head>
+  <body>
+      <h1>광고 이미지 검수 체크리스트</h1>
+  <form action='a.jsp'>
+  <input type='checkbox' id="ck">  표지문구 -  중복 / 오타 / 보험종류<br>
+  <input type='checkbox' id="ck"> 지정문구 - 오타 / 띄어쓰기 / 문구 중복<br>
+  <input type='checkbox' id="ck"> 일반 사진 - 중복 여부 / 외국인<br>
+  <input type='checkbox' id="ck"> 일반 - 사이즈 / 개수 / 테두리 흰색 / 숫자 순서(있다면)<br>
+  <input type='checkbox' id="ck"> 마일리지 - 문구 / 심의번호 맞는지<br>
+  <input type='checkbox' id="ck"> cm링크 - 일러스트 표지 / 원고<br>
+  <input type='checkbox' id="ck"> 특이사항 - 적용 여부<br>
+  <input type='reset' id="btn" value="확인">
+</form>
+  </body>
+</html>
